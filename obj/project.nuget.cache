@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QV8ZahQipkw=",
+  "dgSpecHash": "mCxX4Xz1SXA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nagy.martin.mark\\source\\repos\\ForumMotor\\ForumMotor.csproj",
+  "projectFilePath": "C:\\Users\\nagy.martin.mark\\Documents\\ForumMotor\\ForumMotor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nagy.martin.mark\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\nagy.martin.mark\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

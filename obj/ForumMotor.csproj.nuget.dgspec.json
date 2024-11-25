@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nagy.martin.mark\\source\\repos\\ForumMotor\\ForumMotor.csproj": {}
+    "C:\\Users\\nagy.martin.mark\\Documents\\ForumMotor\\ForumMotor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nagy.martin.mark\\source\\repos\\ForumMotor\\ForumMotor.csproj": {
+    "C:\\Users\\nagy.martin.mark\\Documents\\ForumMotor\\ForumMotor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nagy.martin.mark\\source\\repos\\ForumMotor\\ForumMotor.csproj",
+        "projectUniqueName": "C:\\Users\\nagy.martin.mark\\Documents\\ForumMotor\\ForumMotor.csproj",
         "projectName": "ForumMotor",
-        "projectPath": "C:\\Users\\nagy.martin.mark\\source\\repos\\ForumMotor\\ForumMotor.csproj",
+        "projectPath": "C:\\Users\\nagy.martin.mark\\Documents\\ForumMotor\\ForumMotor.csproj",
         "packagesPath": "C:\\Users\\nagy.martin.mark\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nagy.martin.mark\\source\\repos\\ForumMotor\\obj\\",
+        "outputPath": "C:\\Users\\nagy.martin.mark\\Documents\\ForumMotor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nagy.martin.mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
