@@ -210,6 +210,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/PostPages/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFBhZ2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/PostPages/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFBhZ2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/PostPages/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFBhZ2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/PostPages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFBhZ2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/PostPages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFBhZ2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -220,6 +240,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/TopicPages/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9waWNQYWdlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/TopicPages/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9waWNQYWdlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/TopicPages/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9waWNQYWdlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/TopicPages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9waWNQYWdlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/TopicPages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9waWNQYWdlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nagy.martin.mark/Documents/ForumMotor/Pages/_ViewImports.cshtml]

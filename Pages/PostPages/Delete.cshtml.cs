@@ -7,11 +7,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ForumMotor.Data;
 using ForumMotor.Models;
-using Microsoft.AspNetCore.Authorization;
 
-namespace ForumMotor.Pages
+namespace ForumMotor.Pages.PostPages
 {
-    [Authorize]
     public class DeleteModel : PageModel
     {
         private readonly ForumMotor.Data.ApplicationDbContext _context;
@@ -22,7 +20,7 @@ namespace ForumMotor.Pages
         }
 
         [BindProperty]
-        public Category Category { get; set; } = default!;
+        public Post Post { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -31,15 +29,15 @@ namespace ForumMotor.Pages
                 return NotFound();
             }
 
-            var category = await _context.Categories.FirstOrDefaultAsync(m => m.Id == id);
+            var post = await _context.Posts.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (category == null)
+            if (post == null)
             {
                 return NotFound();
             }
             else
             {
-                Category = category;
+                Post = post;
             }
             return Page();
         }
@@ -51,11 +49,11 @@ namespace ForumMotor.Pages
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(id);
-            if (category != null)
+            var post = await _context.Posts.FindAsync(id);
+            if (post != null)
             {
-                Category = category;
-                _context.Categories.Remove(Category);
+                Post = post;
+                _context.Posts.Remove(Post);
                 await _context.SaveChangesAsync();
             }
 

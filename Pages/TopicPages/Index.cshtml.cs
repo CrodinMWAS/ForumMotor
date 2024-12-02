@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ForumMotor.Data;
 using ForumMotor.Models;
 
-namespace ForumMotor.Pages
+namespace ForumMotor.Pages.TopicPages
 {
     public class IndexModel : PageModel
     {
@@ -19,12 +19,19 @@ namespace ForumMotor.Pages
             _context = context;
         }
 
-        public IList<Category> Category { get;set; } = default!;
+        public IList<Topic> Topic { get;set; } = default!;
 
-        public async Task OnGetAsync()
+        public Category Category { get; set; } = default!;
+
+        public async Task OnGetAsync(int? categoryId)
         {
-            Category = await _context.Categories
-                .Include(c => c.ForumUser).ToListAsync();
+
+            Category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == categoryId);
+
+            Topic = await _context.Topics
+                .Where(t => t.CategoryId == categoryId)
+                .Include(t => t.Category)
+                .Include(t => t.ForumUser).ToListAsync();
         }
     }
 }

@@ -8,11 +8,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ForumMotor.Data;
 using ForumMotor.Models;
-using Microsoft.AspNetCore.Authorization;
 
-namespace ForumMotor.Pages
+namespace ForumMotor.Pages.PostPages
 {
-    [Authorize]
     public class EditModel : PageModel
     {
         private readonly ForumMotor.Data.ApplicationDbContext _context;
@@ -23,7 +21,7 @@ namespace ForumMotor.Pages
         }
 
         [BindProperty]
-        public Category Category { get; set; } = default!;
+        public Post Post { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -32,12 +30,13 @@ namespace ForumMotor.Pages
                 return NotFound();
             }
 
-            var category =  await _context.Categories.FirstOrDefaultAsync(m => m.Id == id);
-            if (category == null)
+            var post =  await _context.Posts.FirstOrDefaultAsync(m => m.Id == id);
+            if (post == null)
             {
                 return NotFound();
             }
-            Category = category;
+            Post = post;
+           ViewData["TopicId"] = new SelectList(_context.Topics, "Id", "Id");
             return Page();
         }
 
@@ -45,13 +44,12 @@ namespace ForumMotor.Pages
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return Page();
-            //}
-            var currentUserId = User?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-            Category.ForumUserId = currentUserId;
-            _context.Attach(Category).State = EntityState.Modified;
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _context.Attach(Post).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +57,7 @@ namespace ForumMotor.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CategoryExists(Category.Id))
+                if (!PostExists(Post.Id))
                 {
                     return NotFound();
                 }
@@ -72,9 +70,9 @@ namespace ForumMotor.Pages
             return RedirectToPage("./Index");
         }
 
-        private bool CategoryExists(int id)
+        private bool PostExists(int id)
         {
-            return _context.Categories.Any(e => e.Id == id);
+            return _context.Posts.Any(e => e.Id == id);
         }
     }
 }

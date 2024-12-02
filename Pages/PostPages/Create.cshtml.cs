@@ -7,11 +7,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ForumMotor.Data;
 using ForumMotor.Models;
-using Microsoft.AspNetCore.Authorization;
 
-namespace ForumMotor.Pages
+namespace ForumMotor.Pages.PostPages
 {
-    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly ForumMotor.Data.ApplicationDbContext _context;
@@ -23,25 +21,22 @@ namespace ForumMotor.Pages
 
         public IActionResult OnGet()
         {
-            ViewData["ForumUserId"] = new SelectList(_context.Users, "Id", "Id");
+        ViewData["TopicId"] = new SelectList(_context.Topics, "Id", "Id");
             return Page();
         }
 
         [BindProperty]
-        public Category Category { get; set; } = default!;
+        public Post Post { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return Page();
-            //}
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-            var currentUserId = User?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-            Category.ForumUserId = currentUserId;
-
-            _context.Categories.Add(Category);
+            _context.Posts.Add(Post);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

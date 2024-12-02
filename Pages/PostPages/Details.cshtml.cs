@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ForumMotor.Data;
 using ForumMotor.Models;
 
-namespace ForumMotor.Pages
+namespace ForumMotor.Pages.PostPages
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace ForumMotor.Pages
             _context = context;
         }
 
-        public Category Category { get; set; } = default!;
+        public Post Post { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,17 +28,14 @@ namespace ForumMotor.Pages
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .Include(c => c.ForumUser)
-
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (category == null)
+            var post = await _context.Posts.FirstOrDefaultAsync(m => m.Id == id);
+            if (post == null)
             {
                 return NotFound();
             }
             else
             {
-                Category = category;
+                Post = post;
             }
             return Page();
         }

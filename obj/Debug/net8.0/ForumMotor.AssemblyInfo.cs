@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ForumMotor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c191ebdc423b167d297b4d69a6dd373566300975")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+887bbc8c7e2b5dce9e7607215ee220a03911a7e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ForumMotor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ForumMotor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

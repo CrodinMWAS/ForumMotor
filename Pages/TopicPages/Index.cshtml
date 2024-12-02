@@ -1,12 +1,12 @@
 ﻿@page
-@model ForumMotor.Pages.IndexModel
+@model ForumMotor.Pages.TopicPages.IndexModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
+<h1>Topics for @Model.Category.Name</h1>
+    
 <p>
     <a asp-page="Create">Create New</a>
 </p>
@@ -14,31 +14,31 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].Name)
+                @Html.DisplayNameFor(model => model.Topic[0].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].Description)
+                @Html.DisplayNameFor(model => model.Topic[0].CreateDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].CreatedDate)
+                @Html.DisplayNameFor(model => model.Topic[0].Category)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].ForumUser)
+                @Html.DisplayNameFor(model => model.Topic[0].ForumUser)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Category) {
+@foreach (var item in Model.Topic) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @Html.DisplayFor(modelItem => item.CreateDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
+                @Html.DisplayFor(modelItem => item.Category.Id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ForumUser.Id)
@@ -46,8 +46,7 @@
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./TopicPages/Index" asp-route-categoryId="@item.Id">Topics</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
